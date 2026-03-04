@@ -1,0 +1,2 @@
+upgrades can be eared both globally or in a single run. those upgrade are simple stats that improve the player's abilities, like more damage, faster ability cast, bigger size or any other useful stat
+upgrades can be earned in game when the player level up or globally with currency

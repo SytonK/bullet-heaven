@@ -1,0 +1,260 @@
+{
+  "main": {
+    "id": "ac77f6d5d79389d6",
+    "type": "split",
+    "children": [
+      {
+        "id": "bda1852c483fbc77",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "76397933e897efb1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "bullet heaven GDD.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "bullet heaven GDD"
+            }
+          },
+          {
+            "id": "2ede8401bfc48133",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "run progression/run progression.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "run progression"
+            }
+          },
+          {
+            "id": "ed60181546337f08",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "run progression/run progression.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "run progression"
+            }
+          },
+          {
+            "id": "e735cd3e1e155901",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "bullet heaven GDD.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "bullet heaven GDD"
+            }
+          },
+          {
+            "id": "1ab562b97d77462d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "abilities/abilities.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "abilities"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "06c20c7d8402c027",
+    "type": "split",
+    "children": [
+      {
+        "id": "e9afac3d57e1151a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1f1b661f6fcb85f5",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "3467e9b47d63ee44",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "3295d8c7f8f64020",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "b3d6171e0100f5c8",
+    "type": "split",
+    "children": [
+      {
+        "id": "e6b18c9a25f920a9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d22644bcf3635065",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "abilities/abilities.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for abilities"
+            }
+          },
+          {
+            "id": "ba773ff35f0d5e31",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "bullet heaven GDD.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from bullet heaven GDD"
+            }
+          },
+          {
+            "id": "18b788790ca887fc",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "c7bd7fdb539509b2",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "6c40593bc8581653",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "bullet heaven GDD.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of bullet heaven GDD"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "1ab562b97d77462d",
+  "lastOpenFiles": [
+    "global progression/global progression.md",
+    "run progression/run progression.md",
+    "run mechanics",
+    "upgrades/upgrades.md",
+    "run mechanics/run.md",
+    "run mechanics/movement.md",
+    "bullet heaven GDD.md",
+    "run progression",
+    "global progression",
+    "run progression",
+    "upgrades",
+    "abilities",
+    "abilities/abilities.md",
+    "Welcome.md"
+  ]
+}

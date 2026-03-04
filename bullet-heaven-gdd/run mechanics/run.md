@@ -1,0 +1,4 @@
+in a run the player will enter a level with enemies and stones. the player will auto activate his abilities to kill enemies and gain xp
+with this xp he will level up and when he levels up he can choose one of a few [abilities](obsidian://open?vault=bullet-heaven-gdd&file=abilities) or [upgrades](obsidian://open?vault=bullet-heaven-gdd&file=upgrades)
+in the run the player starts with an ability that can also mine stones. this can make new paths for the player and enemies to walk in. he can also mine other stuff that will give him in game bonuses or [global progression](obsidian://open?vault=bullet-heaven-gdd&file=global%20progression)
+after clearing a level the starting ability will be upgraded to mine harder stones, deal more damage and gain better loot
