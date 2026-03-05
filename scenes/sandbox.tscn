@@ -1,9 +1,8 @@
 [gd_scene format=3 uid="uid://lwxiawvc5u0j"]
 
 [ext_resource type="PackedScene" uid="uid://crd35g6yl6xsx" path="res://scenes/characters/player/player.tscn" id="1_2ddto"]
-[ext_resource type="Script" uid="uid://cunj2ljeu0vcf" path="res://scripts/components/combat/hitbox and hurtbox/hitbox.gd" id="2_a8pr3"]
+[ext_resource type="PackedScene" uid="uid://0w75dk17wd8u" path="res://scenes/abilities/example_ability.tscn" id="2_a8pr3"]
 [ext_resource type="Script" uid="uid://qxk4fy1uclil" path="res://scripts/components/combat/hitbox and hurtbox/hurtbox.gd" id="2_rgld7"]
-[ext_resource type="Script" uid="uid://dpcln8yo1fkcf" path="res://scripts/components/combat/hitbox and hurtbox/attack_reasorce.gd" id="3_j6lu3"]
 
 [sub_resource type="GDScript" id="GDScript_a8pr3"]
 script/source = "extends Node2D
@@ -12,13 +11,6 @@ script/source = "extends Node2D
 func _on_hurtbox_hurt(attack_resource: AttackResource) -> void:
 	print(attack_resource.damage)
 "
-
-[sub_resource type="Resource" id="Resource_tpt06"]
-script = ExtResource("3_j6lu3")
-damage = 42.0
-metadata/_custom_type_script = "uid://dpcln8yo1fkcf"
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_j6lu3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2ddto"]
 
@@ -29,13 +21,7 @@ script = SubResource("GDScript_a8pr3")
 
 [node name="Player" parent="." unique_id=813426553 instance=ExtResource("1_2ddto")]
 
-[node name="Hitbox" type="Area2D" parent="Player" unique_id=701459901]
-script = ExtResource("2_a8pr3")
-attack_resource = SubResource("Resource_tpt06")
-metadata/_custom_type_script = "uid://cunj2ljeu0vcf"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Hitbox" unique_id=1496209049]
-shape = SubResource("RectangleShape2D_j6lu3")
+[node name="ExampleAbility" parent="Player" unique_id=1476763960 instance=ExtResource("2_a8pr3")]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1676919348]
 position = Vector2(278, 176)
@@ -45,6 +31,7 @@ shape = SubResource("RectangleShape2D_2ddto")
 
 [node name="Hurtbox" type="Area2D" parent="." unique_id=1174876707]
 position = Vector2(451, 139)
+collision_mask = 2
 script = ExtResource("2_rgld7")
 metadata/_custom_type_script = "uid://qxk4fy1uclil"
 
