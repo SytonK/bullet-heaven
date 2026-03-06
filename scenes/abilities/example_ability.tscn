@@ -2,12 +2,6 @@
 
 [ext_resource type="Script" uid="uid://v8kismwpuggp" path="res://scripts/abilities/example_ability.gd" id="1_gbj8a"]
 [ext_resource type="Script" uid="uid://cunj2ljeu0vcf" path="res://scripts/components/combat/hitbox and hurtbox/hitbox.gd" id="2_qwplk"]
-[ext_resource type="Script" uid="uid://dpcln8yo1fkcf" path="res://scripts/components/combat/hitbox and hurtbox/attack_reasorce.gd" id="3_qwplk"]
-
-[sub_resource type="Resource" id="Resource_wub8e"]
-script = ExtResource("3_qwplk")
-damage = 5.0
-metadata/_custom_type_script = "uid://dpcln8yo1fkcf"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wub8e"]
 radius = 50.0
@@ -21,7 +15,7 @@ collision_mask = 2
 monitoring = false
 monitorable = false
 script = ExtResource("2_qwplk")
-attack_resource = SubResource("Resource_wub8e")
+damage = 5.0
 metadata/_custom_type_script = "uid://cunj2ljeu0vcf"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=127706513]

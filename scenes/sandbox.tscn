@@ -6,18 +6,22 @@
 [ext_resource type="PackedScene" uid="uid://bl4wl55ug8v8w" path="res://scenes/enemies/example_enemy.tscn" id="3_a8pr3"]
 [ext_resource type="Script" uid="uid://cag7lch6yfkx8" path="res://scripts/components/combat/health/observable_health_component.gd" id="5_16ffl"]
 [ext_resource type="Script" uid="uid://darurnr64dkqp" path="res://scripts/components/combat/health/health_resource.gd" id="6_17a3a"]
+[ext_resource type="PackedScene" uid="uid://ceisuysre6tg7" path="res://scenes/abilities/dark/dark shard/dark_shard_projectile.tscn" id="7_4b02c"]
 
 [sub_resource type="GDScript" id="GDScript_a8pr3"]
 script/source = "extends Node2D
 
 @onready var observable_health_component: ObservableHealthComponent = $Hurtbox/ObservableHealthComponent
+@onready var dark_shard_projectile: Projectile = $DarkShardProjectile
 
+func _ready() -> void:
+	dark_shard_projectile.speed = 20
 func _on_observable_health_component_health_changed(new_value: float) -> void:
 	print(new_value)
 
 
-func _on_hurtbox_hurt(attack_resource: AttackResource) -> void:
-	observable_health_component.current_health -= attack_resource.damage
+func _on_hurtbox_hurt(damage: float) -> void:
+	observable_health_component.current_health -= damage
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2ddto"]
@@ -71,6 +75,10 @@ shape = SubResource("RectangleShape2D_4b02c")
 script = ExtResource("5_16ffl")
 health_resource = SubResource("Resource_rvfw7")
 metadata/_custom_type_script = "uid://cag7lch6yfkx8"
+
+[node name="DarkShardProjectile" parent="." unique_id=1396752497 instance=ExtResource("7_4b02c")]
+position = Vector2(757, 333)
+damage = 5.0
 
 [connection signal="hurt" from="Hurtbox" to="." method="_on_hurtbox_hurt"]
 [connection signal="health_changed" from="Hurtbox/ObservableHealthComponent" to="." method="_on_observable_health_component_health_changed"]
