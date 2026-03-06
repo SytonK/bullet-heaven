@@ -2,13 +2,32 @@
 
 [ext_resource type="PackedScene" uid="uid://crd35g6yl6xsx" path="res://scenes/characters/player/player.tscn" id="1_2ddto"]
 [ext_resource type="PackedScene" uid="uid://0w75dk17wd8u" path="res://scenes/abilities/example_ability.tscn" id="2_a8pr3"]
+[ext_resource type="Script" uid="uid://qxk4fy1uclil" path="res://scripts/components/combat/hitbox and hurtbox/hurtbox.gd" id="2_rgld7"]
 [ext_resource type="PackedScene" uid="uid://bl4wl55ug8v8w" path="res://scenes/enemies/example_enemy.tscn" id="3_a8pr3"]
+[ext_resource type="Script" uid="uid://cag7lch6yfkx8" path="res://scripts/components/combat/health/observable_health_component.gd" id="5_16ffl"]
+[ext_resource type="Script" uid="uid://darurnr64dkqp" path="res://scripts/components/combat/health/health_resource.gd" id="6_17a3a"]
 
 [sub_resource type="GDScript" id="GDScript_a8pr3"]
 script/source = "extends Node2D
+
+@onready var observable_health_component: ObservableHealthComponent = $Hurtbox/ObservableHealthComponent
+
+func _on_observable_health_component_health_changed(new_value: float) -> void:
+	print(new_value)
+
+
+func _on_hurtbox_hurt(attack_resource: AttackResource) -> void:
+	observable_health_component.current_health -= attack_resource.damage
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2ddto"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4b02c"]
+
+[sub_resource type="Resource" id="Resource_rvfw7"]
+script = ExtResource("6_17a3a")
+max_health = 100.0
+metadata/_custom_type_script = "uid://darurnr64dkqp"
 
 [node name="Sandbox" type="Node2D" unique_id=1721153675]
 script = SubResource("GDScript_a8pr3")
@@ -25,3 +44,21 @@ shape = SubResource("RectangleShape2D_2ddto")
 
 [node name="example_enemy" parent="." unique_id=1405414982 instance=ExtResource("3_a8pr3")]
 position = Vector2(478, 203)
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=1395946367]
+position = Vector2(380, 250)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("2_rgld7")
+metadata/_custom_type_script = "uid://qxk4fy1uclil"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1383177871]
+shape = SubResource("RectangleShape2D_4b02c")
+
+[node name="ObservableHealthComponent" type="Node" parent="Hurtbox" unique_id=806780024]
+script = ExtResource("5_16ffl")
+health_resource = SubResource("Resource_rvfw7")
+metadata/_custom_type_script = "uid://cag7lch6yfkx8"
+
+[connection signal="hurt" from="Hurtbox" to="." method="_on_hurtbox_hurt"]
+[connection signal="health_changed" from="Hurtbox/ObservableHealthComponent" to="." method="_on_observable_health_component_health_changed"]
