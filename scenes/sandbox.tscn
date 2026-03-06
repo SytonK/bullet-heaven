@@ -29,8 +29,6 @@ script = ExtResource("6_17a3a")
 max_health = 100.0
 metadata/_custom_type_script = "uid://darurnr64dkqp"
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_16ffl"]
-
 [node name="Sandbox" type="Node2D" unique_id=1721153675]
 script = SubResource("GDScript_a8pr3")
 
@@ -47,10 +45,22 @@ shape = SubResource("RectangleShape2D_2ddto")
 [node name="example_enemy" parent="." unique_id=1405414982 instance=ExtResource("3_a8pr3")]
 position = Vector2(811, 270)
 
+[node name="example_enemy2" parent="." unique_id=2068383393 instance=ExtResource("3_a8pr3")]
+position = Vector2(711, 158)
+
+[node name="example_enemy3" parent="." unique_id=1083308022 instance=ExtResource("3_a8pr3")]
+position = Vector2(618, 542)
+
+[node name="example_enemy4" parent="." unique_id=803552182 instance=ExtResource("3_a8pr3")]
+position = Vector2(1063, 223)
+
+[node name="example_enemy5" parent="." unique_id=1692536594 instance=ExtResource("3_a8pr3")]
+position = Vector2(903, 414)
+
 [node name="Hurtbox" type="Area2D" parent="." unique_id=1395946367]
 position = Vector2(944, 199)
-collision_layer = 0
-collision_mask = 2
+collision_layer = 2
+collision_mask = 0
 script = ExtResource("2_rgld7")
 metadata/_custom_type_script = "uid://qxk4fy1uclil"
 
@@ -61,39 +71,6 @@ shape = SubResource("RectangleShape2D_4b02c")
 script = ExtResource("5_16ffl")
 health_resource = SubResource("Resource_rvfw7")
 metadata/_custom_type_script = "uid://cag7lch6yfkx8"
-
-[node name="Hurtbox2" type="Area2D" parent="." unique_id=690342455]
-position = Vector2(795, 416)
-collision_layer = 4
-collision_mask = 2
-script = ExtResource("2_rgld7")
-metadata/_custom_type_script = "uid://qxk4fy1uclil"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox2" unique_id=1969129003]
-shape = SubResource("CircleShape2D_16ffl")
-debug_color = Color(1, 0, 1, 0.41960785)
-
-[node name="Hurtbox3" type="Area2D" parent="." unique_id=197334668]
-position = Vector2(664, 151)
-collision_layer = 4
-collision_mask = 2
-script = ExtResource("2_rgld7")
-metadata/_custom_type_script = "uid://qxk4fy1uclil"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox3" unique_id=685924307]
-shape = SubResource("CircleShape2D_16ffl")
-debug_color = Color(1, 0, 1, 0.41960785)
-
-[node name="Hurtbox4" type="Area2D" parent="." unique_id=1890278022]
-position = Vector2(878, 293)
-collision_layer = 4
-collision_mask = 2
-script = ExtResource("2_rgld7")
-metadata/_custom_type_script = "uid://qxk4fy1uclil"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox4" unique_id=1998719245]
-shape = SubResource("CircleShape2D_16ffl")
-debug_color = Color(1, 0, 1, 0.41960785)
 
 [connection signal="hurt" from="Hurtbox" to="." method="_on_hurtbox_hurt"]
 [connection signal="health_changed" from="Hurtbox/ObservableHealthComponent" to="." method="_on_observable_health_component_health_changed"]

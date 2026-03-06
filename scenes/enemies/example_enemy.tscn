@@ -10,7 +10,7 @@ script = ExtResource("2_1w7rc")
 max_health = 25.0
 metadata/_custom_type_script = "uid://darurnr64dkqp"
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_apfmk"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_1w7rc"]
 
 [node name="example_enemy" type="Node2D" unique_id=1405414982]
 script = ExtResource("1_1w7rc")
@@ -21,14 +21,13 @@ health_resource = SubResource("Resource_uf2ql")
 metadata/_custom_type_script = "uid://bmivh6pujlla0"
 
 [node name="Hurtbox" type="Area2D" parent="." unique_id=787564658]
-collision_layer = 4
-collision_mask = 2
+collision_layer = 2
+collision_mask = 0
 script = ExtResource("3_krb1u")
 metadata/_custom_type_script = "uid://qxk4fy1uclil"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1689272431]
-position = Vector2(1, 1)
-shape = SubResource("RectangleShape2D_apfmk")
+shape = SubResource("CircleShape2D_1w7rc")
 debug_color = Color(39.215694, 0, 3.8899512, 0.41960785)
 
 [connection signal="died" from="HealthComponent" to="." method="_on_health_component_died"]
