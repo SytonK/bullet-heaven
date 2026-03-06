@@ -4,7 +4,6 @@ signal hurt(attack_resource: AttackResource)
 
 func _init() -> void:
 	area_entered.connect(_on_area_entered)
-	collision_layer = 0
 
 func get_attacked(attack_resource: AttackResource) -> void:
 	hurt.emit(attack_resource)

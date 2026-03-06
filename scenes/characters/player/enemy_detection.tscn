@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://bqg4fjv6ntddm"]
+
+[ext_resource type="Script" uid="uid://cfphbulykol7e" path="res://scripts/characters/player/enemy_detection.gd" id="1_0fhya"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eevi7"]
+radius = 100.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0fhya"]
+radius = 250.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cv60d"]
+radius = 625.0
+
+[node name="EnemyDetection" type="Node2D" unique_id=109427643]
+script = ExtResource("1_0fhya")
+
+[node name="Area2DSmall" type="Area2D" parent="." unique_id=747669888]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DSmall" unique_id=823977297]
+shape = SubResource("CircleShape2D_eevi7")
+debug_color = Color(0, 0.6, 0.078431375, 0.41960785)
+
+[node name="Area2DMedium" type="Area2D" parent="." unique_id=1285931064]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DMedium" unique_id=1605078250]
+shape = SubResource("CircleShape2D_0fhya")
+debug_color = Color(0, 0.6, 0.078431375, 0.2784314)
+
+[node name="Area2DLarg" type="Area2D" parent="." unique_id=1296506705]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DLarg" unique_id=1996743104]
+shape = SubResource("CircleShape2D_cv60d")
+debug_color = Color(0, 0.6, 0.078431375, 0.13725491)
+
+[node name="SampleFrequencyTimer" type="Timer" parent="." unique_id=1080200799]
+wait_time = 0.12
+autostart = true
+
+[connection signal="timeout" from="SampleFrequencyTimer" to="." method="_on_sample_frequency_timer_timeout"]

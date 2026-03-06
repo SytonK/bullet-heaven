@@ -15,6 +15,11 @@ run/main_scene="uid://lwxiawvc5u0j"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+
 [dotnet]
 
 project/assembly_name="bullet-heaven"
@@ -50,6 +55,7 @@ move_down={
 
 2d_physics/layer_1="world"
 2d_physics/layer_2="player_hitbox"
+2d_physics/layer_3="enemy_hurtbox"
 
 [physics]
 

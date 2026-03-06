@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://crd35g6yl6xsx"]
 
 [ext_resource type="Script" uid="uid://xr587q82s7mg" path="res://scripts/characters/player/player.gd" id="1_7uws0"]
+[ext_resource type="PackedScene" uid="uid://bqg4fjv6ntddm" path="res://scenes/characters/player/enemy_detection.tscn" id="2_t61fv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wocps"]
 
@@ -10,3 +11,5 @@ script = ExtResource("1_7uws0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1599871465]
 shape = SubResource("CapsuleShape2D_wocps")
+
+[node name="EnemyDetection" parent="." unique_id=109427643 instance=ExtResource("2_t61fv")]
