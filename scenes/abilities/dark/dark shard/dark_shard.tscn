@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://bokk646wc82ku"]
-
-[ext_resource type="Script" uid="uid://l6464b5cd1ov" path="res://scripts/abilities/dark/dark shard/dark_shard.gd" id="1_f4sup"]
-
-[node name="DarkShard" type="Node2D" unique_id=2035818]
-script = ExtResource("1_f4sup")
-metadata/_custom_type_script = "uid://cvgbiiko0cahl"

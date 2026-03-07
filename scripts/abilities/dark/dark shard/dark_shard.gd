@@ -20,6 +20,10 @@ func _init_cooldown() -> void:
 	_cooldown_timer.timeout.connect(_on_cooldown_timer_timeout)
 	add_child(_cooldown_timer)
 
+func add_ability(player: Player) -> void:
+	super.add_ability(player)
+	enemy_detecroy = player.enemy_detection
+
 func _on_cooldown_timer_timeout() -> void:
 	var dark_shard_projectile: Projectile = DARK_SHARD_PROJECTILE.instantiate()
 	dark_shard_projectile.damage = DAMAGE

@@ -3,7 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://crd35g6yl6xsx" path="res://scenes/characters/player/player.tscn" id="1_2ddto"]
 [ext_resource type="PackedScene" uid="uid://0w75dk17wd8u" path="res://scenes/abilities/example_ability.tscn" id="2_a8pr3"]
 [ext_resource type="Script" uid="uid://qxk4fy1uclil" path="res://scripts/components/combat/hitbox and hurtbox/hurtbox.gd" id="2_rgld7"]
-[ext_resource type="Script" uid="uid://l6464b5cd1ov" path="res://scripts/abilities/dark/dark shard/dark_shard.gd" id="3_17a3a"]
 [ext_resource type="PackedScene" uid="uid://bl4wl55ug8v8w" path="res://scenes/enemies/example_enemy.tscn" id="3_a8pr3"]
 [ext_resource type="Script" uid="uid://cag7lch6yfkx8" path="res://scripts/components/combat/health/observable_health_component.gd" id="5_16ffl"]
 [ext_resource type="Script" uid="uid://darurnr64dkqp" path="res://scripts/components/combat/health/health_resource.gd" id="6_17a3a"]
@@ -13,12 +12,13 @@ script/source = "extends Node2D
 
 @onready var player: Player = $Player
 
-@onready var dark_shard: DarkShard = $Player/DarkShard
 
 @onready var observable_health_component: ObservableHealthComponent = $Hurtbox/ObservableHealthComponent
 
 func _ready() -> void:
-	dark_shard.enemy_detecroy = player.enemy_detection
+	var dark_shard = DarkShard.new()
+	
+	dark_shard.add_ability(player)
 
 func _on_observable_health_component_health_changed(new_value: float) -> void:
 	print(new_value)
@@ -43,9 +43,6 @@ script = SubResource("GDScript_a8pr3")
 [node name="Player" parent="." unique_id=813426553 instance=ExtResource("1_2ddto")]
 
 [node name="ExampleAbility" parent="Player" unique_id=1476763960 instance=ExtResource("2_a8pr3")]
-
-[node name="DarkShard" type="Node2D" parent="Player" unique_id=1330789607]
-script = ExtResource("3_17a3a")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1676919348]
 position = Vector2(278, 176)
