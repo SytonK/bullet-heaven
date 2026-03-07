@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ceisuysre6tg7"]
+
+[ext_resource type="Script" uid="uid://gv5ehtk5x3ab" path="res://scripts/components/combat/hitbox and hurtbox/projectiles/projectile.gd" id="1_sv3r2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x2x2g"]
+
+[node name="DarkShardProjectile" type="Area2D" unique_id=1396752497]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_sv3r2")
+metadata/_custom_type_script = "uid://cunj2ljeu0vcf"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=396333874]
+shape = SubResource("CircleShape2D_x2x2g")
