@@ -2,13 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cyc68bhwlxxh4" path="res://scripts/enemies/example_enemy.gd" id="1_1w7rc"]
 [ext_resource type="Script" uid="uid://bmivh6pujlla0" path="res://scripts/components/combat/health/health_component.gd" id="1_4rqkl"]
-[ext_resource type="Script" uid="uid://darurnr64dkqp" path="res://scripts/components/combat/health/health_resource.gd" id="2_1w7rc"]
 [ext_resource type="Script" uid="uid://qxk4fy1uclil" path="res://scripts/components/combat/hitbox and hurtbox/hurtbox.gd" id="3_krb1u"]
-
-[sub_resource type="Resource" id="Resource_uf2ql"]
-script = ExtResource("2_1w7rc")
-max_health = 25.0
-metadata/_custom_type_script = "uid://darurnr64dkqp"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1w7rc"]
 
@@ -17,7 +11,7 @@ script = ExtResource("1_1w7rc")
 
 [node name="HealthComponent" type="Node" parent="." unique_id=730497860]
 script = ExtResource("1_4rqkl")
-health_resource = SubResource("Resource_uf2ql")
+max_health = 25.0
 metadata/_custom_type_script = "uid://bmivh6pujlla0"
 
 [node name="Hurtbox" type="Area2D" parent="." unique_id=787564658]

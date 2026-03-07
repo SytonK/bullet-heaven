@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://xr587q82s7mg" path="res://scripts/characters/player/player.gd" id="1_7uws0"]
 [ext_resource type="PackedScene" uid="uid://bqg4fjv6ntddm" path="res://scenes/characters/player/enemy_detection.tscn" id="2_t61fv"]
+[ext_resource type="Script" uid="uid://cag7lch6yfkx8" path="res://scripts/components/combat/health/observable_health_component.gd" id="3_686vu"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wocps"]
 
@@ -13,3 +14,7 @@ script = ExtResource("1_7uws0")
 shape = SubResource("CapsuleShape2D_wocps")
 
 [node name="EnemyDetection" parent="." unique_id=109427643 instance=ExtResource("2_t61fv")]
+
+[node name="ObservableHealthComponent" type="Node" parent="." unique_id=1422672951]
+script = ExtResource("3_686vu")
+metadata/_custom_type_script = "uid://cag7lch6yfkx8"
